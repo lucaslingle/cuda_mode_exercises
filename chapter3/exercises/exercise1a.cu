@@ -95,5 +95,9 @@ int main()
             printf("P_%d,%d: %0.1f\n", i, j, P[i * jmax + j]);
         }
     }
+
+    free(M);
+    free(N);
+    free(P);
     return 0;
 }

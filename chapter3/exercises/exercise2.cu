@@ -78,5 +78,9 @@ int main()
     {
         printf("A_%d: %0.1f\n", i, A[i]);
     }
+
+    free(A);
+    free(B);
+    free(C);
     return 0;
 }
