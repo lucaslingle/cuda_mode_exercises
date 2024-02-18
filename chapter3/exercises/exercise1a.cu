@@ -18,7 +18,7 @@ __global__ void MatmulRowthreadKernel(float *M, float *N, float *P, int imax, in
     }
 }
 
-float *MatmulRowthreadStub(float *M, float *N, float *P, int imax, int kmax, int jmax)
+void MatmulRowthreadStub(float *M, float *N, float *P, int imax, int kmax, int jmax)
 {
     int msize = imax * kmax * sizeof(float);
     int nsize = kmax * jmax * sizeof(float);

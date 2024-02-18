@@ -18,7 +18,7 @@ __global__ void MatmulColthreadKernel(float *M, float *N, float *P, int imax, in
     }
 }
 
-float *MatmulColthreadStub(float *M, float *N, float *P, int imax, int kmax, int jmax)
+void MatmulColthreadStub(float *M, float *N, float *P, int imax, int kmax, int jmax)
 {
     int msize = imax * kmax * sizeof(float);
     int nsize = kmax * jmax * sizeof(float);
