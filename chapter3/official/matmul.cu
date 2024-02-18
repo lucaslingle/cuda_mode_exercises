@@ -1,4 +1,4 @@
-__global__ void MatrixMulKernel(float *M, float *N, float *P, int Width)
+__global__ void MatmulKernel(float *M, float *N, float *P, int Width)
 {
     int row = blockIdx.y * blockDim.y + threadIdx.y;
     int col = blockIdx.x * blockDim.x + threadIdx.x;

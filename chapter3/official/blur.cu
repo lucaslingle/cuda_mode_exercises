@@ -1,4 +1,4 @@
-#define BLUR_SIZE 1;
+#define BLUR_SIZE 1
 
 __global__ void blurKernel(unsigned char *in, unsigned char *out, int w, int h)
 {
