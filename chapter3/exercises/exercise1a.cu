@@ -34,7 +34,6 @@ void MatmulRowthreadStub(float *M, float *N, float *P, int imax, int kmax, int j
     cudaMemcpy(N_d, N, nsize, cudaMemcpyHostToDevice);
 
     int block_sz = 256;
-    printf("grid dim x: %d\n", (imax + (block_sz - 1)) / block_sz);
     dim3 dimsGrid((imax + (block_sz - 1)) / block_sz, 1, 1);
     dim3 dimsBlock(block_sz, 1, 1);
     MatmulRowthreadKernel<<<dimsGrid, dimsBlock>>>(M_d, N_d, P_d, imax, kmax, jmax);
