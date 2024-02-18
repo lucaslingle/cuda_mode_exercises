@@ -33,7 +33,7 @@ void MatmulColthreadStub(float *M, float *N, float *P, int imax, int kmax, int j
     cudaMemcpy(N_d, N, nsize, cudaMemcpyHostToDevice);
 
     int thread_block_size = 256;
-    dim3 dimsGrid(ceil(imax / thread_block_size), 1, 1);
+    dim3 dimsGrid(ceil(jmax / thread_block_size), 1, 1);
     dim3 dimsBlock(thread_block_size, 1, 1);
     MatmulColthreadKernel<<<dimsGrid, dimsBlock>>>(M_d, N_d, P_d, imax, kmax, jmax);
 
