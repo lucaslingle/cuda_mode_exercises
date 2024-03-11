@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define TILE_WIDTH 2
+#define TILE_WIDTH 16
 
 __global__ void tiledMatmulKernel(float *M, float *N, float *P, int Width)
 {
@@ -58,7 +58,7 @@ void tiledMatmulStub(float *M, float *N, float *P, int Width)
 int main()
 {
     float *M, *N, *P, *P_Expected;
-    int Width = 4;
+    int Width = 1024;
     int MatBytes = Width * Width * sizeof(float);
 
     M = (float *)malloc(MatBytes);
