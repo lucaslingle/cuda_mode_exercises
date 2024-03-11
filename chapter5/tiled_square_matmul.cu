@@ -92,10 +92,9 @@ int main()
     {
         for (int j = 0; j < Width; ++j)
         {
-            /* printf("P_%d,%d: %0.1f\n", i, j, P[i * Width + j]); */
             if (P[i * Width + j] != P_Expected[i * Width + j])
             {
-                printf("Value P[%d,%d] was %0.1f, expected %0.1f\n", i, j, P[i * Width + j], 2 * M[i * Width + j]);
+                printf("Value P[%d,%d] was %0.1f, expected %0.1f\n", i, j, P[i * Width + j], P_Expected[i * Width + j]);
             }
         }
     }
